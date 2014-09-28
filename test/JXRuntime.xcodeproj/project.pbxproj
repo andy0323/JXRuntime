@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10D563A19D069760054DB3D /* NSObject+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A10D563919D069760054DB3D /* NSObject+Method.m */; };
-		A10D563D19D069860054DB3D /* NSObject+Class.m in Sources */ = {isa = PBXBuildFile; fileRef = A10D563C19D069860054DB3D /* NSObject+Class.m */; };
+		A12C10F719D7FB8900F6D800 /* JXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A12C10F619D7FB8900F6D800 /* JXObject.m */; };
+		A12C10FA19D7FE3900F6D800 /* JXTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A12C10F919D7FE3900F6D800 /* JXTestObject.m */; };
+		A14573F019D815AC007E5C36 /* NSObject+JXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A14573EF19D815AC007E5C36 /* NSObject+JXRuntime.m */; };
 		A1FC31FD19C9067F00B7AF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FC31FC19C9067F00B7AF0C /* Foundation.framework */; };
 		A1FC31FF19C9067F00B7AF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FC31FE19C9067F00B7AF0C /* CoreGraphics.framework */; };
 		A1FC320119C9067F00B7AF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FC320019C9067F00B7AF0C /* UIKit.framework */; };
@@ -35,11 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A10D563719D069120054DB3D /* JXRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXRuntime.h; sourceTree = "<group>"; };
-		A10D563819D069760054DB3D /* NSObject+Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Method.h"; sourceTree = "<group>"; };
-		A10D563919D069760054DB3D /* NSObject+Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Method.m"; sourceTree = "<group>"; };
-		A10D563B19D069860054DB3D /* NSObject+Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Class.h"; sourceTree = "<group>"; };
-		A10D563C19D069860054DB3D /* NSObject+Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Class.m"; sourceTree = "<group>"; };
+		A12C10F519D7FB8900F6D800 /* JXObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXObject.h; sourceTree = "<group>"; };
+		A12C10F619D7FB8900F6D800 /* JXObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXObject.m; sourceTree = "<group>"; };
+		A12C10F819D7FE3900F6D800 /* JXTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTestObject.h; sourceTree = "<group>"; };
+		A12C10F919D7FE3900F6D800 /* JXTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTestObject.m; sourceTree = "<group>"; };
+		A14573EE19D815AC007E5C36 /* NSObject+JXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JXRuntime.h"; sourceTree = "<group>"; };
+		A14573EF19D815AC007E5C36 /* NSObject+JXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JXRuntime.m"; sourceTree = "<group>"; };
 		A1FC31F919C9067F00B7AF0C /* JXRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FC31FC19C9067F00B7AF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1FC31FE19C9067F00B7AF0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,10 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14573ED19D815AB007E5C36 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A14573EE19D815AC007E5C36 /* NSObject+JXRuntime.h */,
+				A14573EF19D815AC007E5C36 /* NSObject+JXRuntime.m */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
 		A1FC31F019C9067F00B7AF0C = {
 			isa = PBXGroup;
 			children = (
-				A1FC322E19C906C500B7AF0C /* src */,
+				A14573ED19D815AB007E5C36 /* src */,
 				A1FC320219C9067F00B7AF0C /* JXRuntime */,
 				A1FC321B19C9067F00B7AF0C /* JXRuntimeTests */,
 				A1FC31FB19C9067F00B7AF0C /* Frameworks */,
@@ -122,6 +134,10 @@
 				A1FC320C19C9067F00B7AF0C /* AppDelegate.m */,
 				A1FC322B19C9069F00B7AF0C /* HomeViewController.h */,
 				A1FC322C19C9069F00B7AF0C /* HomeViewController.m */,
+				A12C10F519D7FB8900F6D800 /* JXObject.h */,
+				A12C10F619D7FB8900F6D800 /* JXObject.m */,
+				A12C10F819D7FE3900F6D800 /* JXTestObject.h */,
+				A12C10F919D7FE3900F6D800 /* JXTestObject.m */,
 				A1FC320E19C9067F00B7AF0C /* Images.xcassets */,
 				A1FC320319C9067F00B7AF0C /* Supporting Files */,
 			);
@@ -155,18 +171,6 @@
 				A1FC321E19C9067F00B7AF0C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A1FC322E19C906C500B7AF0C /* src */ = {
-			isa = PBXGroup;
-			children = (
-				A10D563719D069120054DB3D /* JXRuntime.h */,
-				A10D563819D069760054DB3D /* NSObject+Method.h */,
-				A10D563919D069760054DB3D /* NSObject+Method.m */,
-				A10D563B19D069860054DB3D /* NSObject+Class.h */,
-				A10D563C19D069860054DB3D /* NSObject+Class.m */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10D563A19D069760054DB3D /* NSObject+Method.m in Sources */,
 				A1FC320D19C9067F00B7AF0C /* AppDelegate.m in Sources */,
+				A12C10F719D7FB8900F6D800 /* JXObject.m in Sources */,
+				A14573F019D815AC007E5C36 /* NSObject+JXRuntime.m in Sources */,
+				A12C10FA19D7FE3900F6D800 /* JXTestObject.m in Sources */,
 				A1FC320919C9067F00B7AF0C /* main.m in Sources */,
 				A1FC322D19C9069F00B7AF0C /* HomeViewController.m in Sources */,
-				A10D563D19D069860054DB3D /* NSObject+Class.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
